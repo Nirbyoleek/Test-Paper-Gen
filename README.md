@@ -60,23 +60,10 @@ Developed by [Microsoft Learn Student Ambassador, SRMIST](https://msclubsrm.in/)
 
 </br>
 
-## [Android App](https://q-gen.netlify.app/)
-
-|                                                                     |     |                                                                     |
-| ------------------------------------------------------------------- | --- | ------------------------------------------------------------------- |
-| <img src="./blob/imgp1.jpg" width="200" style="border-radius:4px;"> |     | <img src="./blob/imgp2.jpg" width="200" style="border-radius:4px;"> |
-| <img src="./blob/imgp3.jpg" width="200" style="border-radius:4px;"> |     | <img src="./blob/imgp4.jpg" width="200" style="border-radius:4px;"> |
-|                                                                     |     |
-
-</br>
-
-## For contribution to the project
-
 ## Prerequisites
 
-> - python 3.6 or above
-> - node.js installed version 14.7.1 or above
-> - android studio (kotlin)
+> - python 3.7 or above
+> - node.js installed
 
 ## Installation
 
@@ -87,7 +74,7 @@ Developed by [Microsoft Learn Student Ambassador, SRMIST](https://msclubsrm.in/)
 - `cd api`
 - `install pipenv`
 - `pipenv shell`
-  > before shell download python 3.6 or set the python version in pipfile
+  > before shell download python 3.7 or set the python version in pipfile
 - `pipenv install`
 - `flask run`
 
