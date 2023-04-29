@@ -1,0 +1,429 @@
+.Main {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    background: #ffffff;
+    color: #000;
+    min-height: calc( 100vh - 10px);
+    padding-top: 10px;
+    overflow: auto;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(105, 105, 105);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 2px;
+  }
+  .Element {
+    border: 1px solid black;
+    min-height: 8vh;
+    text-align: justify;
+    color: #1e1e1e;
+    width: 61vw;
+    margin: 3vw auto;
+    border-radius: 0.8vw;
+    align-items: inherit;
+    background-color: #000;
+  }
+  .Question {
+    border: 1px solid white;
+    border-radius: 0.7vw;
+    justify-content: center;
+    background-color: white;
+    padding: 5vh 2vw;
+    color: #000;
+    user-select: none;
+  }
+  #Answer {
+    color: white;
+    border-radius: 2vh;
+    display: inline-block;
+    margin-left: 2vw;
+  }
+  .Input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: black;
+    color: white;
+    min-width: 20vw;
+    margin: 2.3vw 1vw;
+    margin-bottom: 1vw;
+    font-size: 18px;
+  }
+  #Submit {
+    font-size: 1.7vw;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(0,0,0);
+    color: #000;
+    margin-top: 40px;
+    background-color: transparent;
+    user-select: none;
+  }
+  #Submit:hover {
+    background-color: rgb(0,0,0);
+    color: #fff;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .modalBackdrop {
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    background-color: #1e1e1ec5;
+  }
+  .modal {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 30vw;
+    color: #1e1e1e;
+    position: fixed;
+    top: 50vh;
+    margin-top: -15vh;
+    left: 50%;
+    margin-left: -15vw;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vw;
+  }
+  .modal h2 {
+    margin: 8px 0px;
+    margin-top: 0px;
+    font-weight: 800;
+  }
+  .modal p {
+    margin: 8px 0px;
+  }
+  .modal button {
+    margin: 8px 0px;
+    background-color: black;
+    color: #ffffff;
+    border: 1px solid black;
+    padding: 8px 15px;
+    border-radius: 10px;
+  }
+  .modal button:hover {
+    background-color: #fff;
+    color: #000;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .modal button:active {
+    background-color: rgb(204, 202, 202);
+  }
+  .answerkey {
+    background-color: #1e1e1e;
+    height: calc(20vh - 2px);
+    width: calc(30vw - 2px);
+    color: #fff;
+    position: fixed;
+    top: 50vh;
+    margin-top: -15vh;
+    left: 50%;
+    margin-left: -15vw;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1vw;
+    border: 1px solid white;
+    overflow-y: hidden;
+  }
+  .answerkey p {
+    margin-top: 31vh;
+    margin-bottom: 0px;
+    font-weight: 800;
+  }
+  .answerkey ul {
+    padding: 0;
+    height: 30vh;
+    width: 90%;
+    overflow-y: auto;
+  }
+  .answerkey ul::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.192);
+    width: 4px;
+    border-radius: 8px;
+  }
+  .answerkey ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 4px;
+    border-radius: 8px;
+  }
+  .answerkey ul li {
+    display: block;
+    margin: 15px 0px;
+  }
+  
+  @media screen and (max-width: 940px) {
+    .Question {
+      font-size: 1.6vw;
+      padding: 2.5vw 2vw;
+    }
+    #Answer {
+      font-size: 1.6vw;
+    }
+    .Input {
+      font-size: 2.1vw;
+      line-height: 2.1vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 2.1vw;
+      padding: 1.4vw 4.2vw;
+      border-radius: 1.4vw;
+    }
+  }
+  
+  @media screen and (max-width: 870px) {
+    .Question {
+      font-size: 1.73vw;
+      padding: 2.5vw 2vw;
+    }
+    .Element {
+      width: 75vw;
+      margin-bottom: 5vh;
+    }
+    #Answer {
+      font-size: 1.72vw;
+    }
+    .Input {
+      font-size: 2.23vw;
+      line-height: 2.2vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 2.6vw;
+      padding: 1.4vw 4.2vw;
+      border-radius: 1.4vw;
+    }
+    .modal {
+      width: 40vw;
+      left: 50%;
+      margin-left: -20vw;
+    }
+    .answerkey {
+      width: calc(40vw - 2px);
+      left: 50%;
+      margin-left: -20vw;
+    }
+  }
+  
+  @media screen and (max-width: 720px) {
+    .Question {
+      font-size: 1.9vw;
+      line-height: 2.9vw;
+      padding: 2.3vw 2vw;
+    }
+    #Answer {
+      font-size: 1.9vw;
+    }
+    .Input {
+      font-size: 2.43vw;
+      line-height: 2.5vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 2.9vw;
+      padding: 1.4vw 4.2vw;
+      border-radius: 1.4vw;
+    }
+    #heading2 {
+      font-size: 5vw;
+    }
+    .modal {
+      width: 46vw;
+      left: 50%;
+      margin-left: -23vw;
+    }
+    .answerkey {
+      width: calc(46vw - 2px);
+      left: 50%;
+      margin-left: -23vw;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .Question {
+      font-size: 2.1vw;
+      line-height: 2.9vw;
+      padding: 2.1vw 2vw;
+    }
+    #Answer {
+      font-size: 2.1vw;
+    }
+    .Element {
+      width: 80vw;
+      margin-bottom: 5vh;
+    }
+    .Input {
+      font-size: 2.53vw;
+      line-height: 2.6vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 3.3vw;
+      padding: 1.4vw 4.2vw;
+      border-radius: 1.4vw;
+    }
+    .modal {
+      width: 60vw;
+      left: 50%;
+      margin-left: -30vw;
+    }
+    .answerkey {
+      width: calc(60vw - 2px);
+      left: 50%;
+      margin-left: -30vw;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .Element {
+      width: 90vw;
+      margin-bottom: 5vh;
+    }
+    .Input {
+      font-size: 2.53vw;
+      line-height: 2.6vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 3.7vw;
+      padding: 1.4vw 4.2vw;
+      border-radius: 1.4vw;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .Question {
+      font-size: 2.6vw;
+      line-height: 4vw;
+      padding: 2.1vw 2vw;
+    }
+    #Answer {
+      font-size: 2.6vw;
+    }
+    .Input {
+      font-size: 2.93vw;
+      line-height: 3vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 4vw;
+      padding: 2vw 5.2vw;
+      border-radius: 1.4vw;
+    }
+    .modal {
+      width: 70vw;
+      left: 50%;
+      margin-left: -35vw;
+    }
+    .answerkey {
+      width: calc(70vw - 2px);
+      left: 50%;
+      margin-left: -35vw;
+    }
+  }
+  
+  @media screen and (max-width: 430px) {
+    .Question {
+      font-size: 2.7vw;
+      line-height: 4.4vw;
+      padding: 2.3vw 2vw;
+    }
+    #Answer {
+      font-size: 2.7vw;
+    }
+    .Input {
+      font-size: 3.2vw;
+      line-height: 3.3vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 4.7vw;
+      padding: 2vw 5.2vw;
+      border-radius: 1.4vw;
+    }
+    #heading2 {
+      font-size: 7vw;
+    }
+    .modal {
+      width: 86vw;
+      left: 50%;
+      margin-left: -43vw;
+    }
+    .answerkey {
+      width: calc(86vw - 2px);
+      left: 50%;
+      margin-left: -43vw;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    .Question {
+      font-size: 2.9vw;
+      line-height: 5.4vw;
+      padding: 2.3vw 2vw;
+    }
+    #Answer {
+      font-size: 2.9vw;
+    }
+    .Input {
+      font-size: 3.2vw;
+      line-height: 3.3vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 5vw;
+      padding: 2.4vw 6.2vw;
+      border-radius: 1.4vw;
+    }
+  
+    #heading2 {
+      font-size: 7.6vw;
+    }
+  }
+  
+  @media screen and (max-width: 280px) {
+    .Question {
+      font-size: 3.2vw;
+      line-height: 5.8vw;
+      padding: 2.3vw 2vw;
+    }
+    #Answer {
+      font-size: 3.2vw;
+    }
+    .Input {
+      font-size: 3.2vw;
+      line-height: 3.3vw;
+      margin: 1vw 1vw;
+      width: 80%;
+    }
+    #Submit {
+      font-size: 5vw;
+      padding: 2.4vw 6.2vw;
+      border-radius: 1.4vw;
+    }
+    #heading2 {
+      font-size: 8vw;
+    }
+  }
+  

@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HomeworkPortal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/secondary_color</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+
+        <item name="colorOnSecondary">@color/primary_color</item>
+        <!-- Status bar color. -->
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/secondary_color</item>
+
+    </style>
+
+
+
+    <style name="FullscreenTheme" parent="Theme.HomeworkPortal">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_color</item>
+        <item name="android:windowBackground">@drawable/splash_screen_layout</item>
+    </style>
+
+</resources>

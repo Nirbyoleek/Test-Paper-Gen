@@ -1,0 +1,76 @@
+.Nav {
+  width: calc( 100% - 20px);
+  height: 60px;
+  text-align: left;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0.4vw;
+  background: #1e1e1e;
+}
+.logoContainer {
+  float: left;
+  padding: 5px 15px;
+}
+.logoContainer a{
+  text-decoration: none;
+}
+.navBar {
+  float: left;
+}
+.navBar ul {
+  padding: 0px;
+}
+.navBar ul li {
+  display: inline-block;
+  padding-top: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#heading1 {
+  font-size: 2em;
+  font-weight: 900;
+  margin: 3px;
+  margin-left: 10px;
+  font-family: "Montserrat";
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+#heading1 img{
+  height:1.1em;
+  margin-right: 5px;
+}
+.heading2 {
+  font-size: 1.05em;
+  font-weight: 300;
+  line-height: 1px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.heading2:hover {
+  color: #fff;
+  text-shadow: 0px 0px 2px #fff;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  .Nav {
+    justify-content: center;
+  }
+  .logoContainer {
+    float: none;
+  }
+  .navBar {
+    display: none;
+  }
+}

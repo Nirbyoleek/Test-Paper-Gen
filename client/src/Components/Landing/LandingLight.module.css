@@ -1,0 +1,265 @@
+.majorContainer {
+    background: #ffffff;
+    color: black;
+    min-height: calc( 100vh - 10px);
+    padding-top: 10px;
+    transition-duration: 0.4s;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "intro logo";
+    gap: 5px;
+    height: calc(100vh - 70px);
+  }
+  .introUploader {
+    grid-area: "intro";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logoContainer {
+    grid-area: "logo";
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  /*--------for test--------*/
+  
+  .intro {
+    text-align: left;
+    margin-left: 17%;
+    margin-top: -20px;
+    width: 83%;
+  }
+  .intro h1 {
+    font-family: "Montserrat";
+    font-size: 45px;
+    font-weight: bolder;
+    line-height: 54px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+  .intro p {
+    margin: 0px;
+    text-align: justify;
+    font-family: "Montserrat";
+    margin-left: 4px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 100;
+    color: #000000c5;
+  }
+  .buttonContainer {
+    text-align: left;
+    margin-left: 17%;
+    margin-top: 50px;
+    width: 83%;
+  }
+  .buttonContainer button {
+    background-color: #ffffff;
+    color: #1e1e1e;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 35px;
+    padding-bottom: 9px;
+    padding-right: 25px;
+    border: none;
+    border-radius: 100px;
+    transition-duration: 0.4s;
+  }
+  .buttonContainer button img {
+    height: 14px;
+    width: 0px;
+    opacity: 0;
+    margin-left: 10px;
+    transition-duration: 0.4s;
+  }
+  .buttonContainer button:hover {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition-duration: 0.4s;
+    padding-left: 22px;
+    padding-right: 18px;
+    box-shadow: 0px 0px 10px 0px #1e1e1e;
+  }
+  .buttonContainer button:hover img {
+    opacity: 1;
+    width: 20px;
+  }
+  .waveCtn {
+    width: 100%;
+  }
+  .logo{
+    width: 30%;
+    margin-bottom: -25vw;
+    margin-right: -10vw;
+    animation: floating 4s ease-in-out infinite;
+  }
+  
+  @keyframes floating{
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(10px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  
+  }
+  
+  .forAnimation {
+    position: fixed;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e1e93;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loading {
+    width: 17%;
+    mix-blend-mode: lighten;
+  }
+  .phnwv {
+    display: none;
+  }
+  .modalBackdrop {
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 200;
+    background-color: #1e1e1ec5;
+  }
+  .modal {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 30vw;
+    color: #1e1e1e;
+    position: fixed;
+    top: 50vh;
+    margin-top: -15vh;
+    left: 50%;
+    margin-left: -15vw;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vw;
+  }
+  .modal h2 {
+    margin: 8px 0px;
+    margin-top: 0px;
+    font-weight: 800;
+  }
+  .modal p {
+    margin: 8px 0px;
+  }
+  .modal button {
+    margin: 8px 0px;
+    background-color: black;
+    color: #ffffff;
+    border: 1px solid black;
+    padding: 8px 15px;
+    border-radius: 10px;
+  }
+  .modal button:hover {
+    background-color: #fff;
+    color: #000;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .modal button:active {
+    background-color: rgb(204, 202, 202);
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .waveCtn {
+      height: 80vh;
+    }
+  }
+  
+  @media screen and (max-width: 880px) {
+    .loading {
+      width: 22%;
+      mix-blend-mode: lighten;
+    }
+    .modal {
+      width: 40vw;
+      left: 50%;
+      margin-left: -20vw;
+    }
+  }
+  
+  @media screen and (max-width: 770px) {
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .logoContainer {
+      display: none;
+    }
+    .loading {
+      width: 25%;
+      mix-blend-mode: lighten;
+    }
+    .modal {
+      width: 46vw;
+      left: 50%;
+      margin-left: -23vw;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .phnwv {
+      width: 100%;
+      height: 50vh;
+      margin-top: -120px;
+      position: fixed;
+      top: 23vh;
+      z-index: 1;
+      display: block;
+      opacity: 0.6;
+    }
+    .loading {
+      width: 33%;
+      mix-blend-mode: lighten;
+    }
+    .modal {
+      width: 60vw;
+      left: 50%;
+      margin-left: -30vw;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .loading {
+      width: 38%;
+      mix-blend-mode: lighten;
+    }
+    .modal {
+      width: 86vw;
+      left: 50%;
+      margin-left: -43vw;
+    }
+  }
+  
+  @media screen and (max-width: 380px) {
+    .loading {
+      width: 48%;
+      mix-blend-mode: lighten;
+    }
+  }
+  
