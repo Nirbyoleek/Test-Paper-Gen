@@ -10,7 +10,7 @@
 
 Q-gen is an app, that generates "fill in the black" type questions from the text-paragraphs entered by the user or the pdfs uploaded.
 
-Developed by [Microsoft Learn Student Ambassador, SRMIST](https://msclubsrm.in/)
+
 
 </br>
 
@@ -31,7 +31,7 @@ Developed by [Microsoft Learn Student Ambassador, SRMIST](https://msclubsrm.in/)
 ## Platforms
 
 > - [Q-gen Website](https://q-gen.netlify.app/) which can be accessed via any web browser
-> - [Q-gen Android App]()
+
 
 </br>
 
@@ -39,7 +39,7 @@ Developed by [Microsoft Learn Student Ambassador, SRMIST](https://msclubsrm.in/)
 
 > - Visual Studio Code
 > - Google Chrome Browser
-> - Android Studio
+
 
 </br>
 
